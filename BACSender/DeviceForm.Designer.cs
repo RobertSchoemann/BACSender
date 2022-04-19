@@ -385,7 +385,7 @@
             this.DATABASE_REVISION_textBox.Name = "DATABASE_REVISION_textBox";
             this.DATABASE_REVISION_textBox.Size = new System.Drawing.Size(160, 23);
             this.DATABASE_REVISION_textBox.TabIndex = 35;
-            this.DATABASE_REVISION_textBox.Text = "3";
+            this.DATABASE_REVISION_textBox.Text = "0";
             // 
             // DATABASE_REVISION_label
             // 

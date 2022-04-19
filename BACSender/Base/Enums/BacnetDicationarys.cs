@@ -1744,7 +1744,6 @@
             { 23, "faults-listed"},
             { 24, "referenced-object-fault"}
         };
-
         public static Dictionary<int, string> bvlc_function_names = new Dictionary<int, string>
         {
             {0x00, "BVLC-Result"},
@@ -1761,7 +1760,6 @@
             {0x0b, "Original-Broadcast-NPDU"},
             {0x0c, "Secured-BVLL"}
         };
-
         public static Dictionary<int, string> bvlc_ipv6_function_names = new Dictionary<int, string>
         {
             { 0x00, "BVLC-Result" },

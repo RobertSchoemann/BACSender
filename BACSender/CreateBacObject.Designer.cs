@@ -327,7 +327,7 @@ namespace BACSender
             // 
             // UNITS_comboBox
             // 
-            this.UNITS_comboBox.DisplayMember = "Value";
+            this.UNITS_comboBox.DisplayMember = "Key + Value";
             this.UNITS_comboBox.FormattingEnabled = true;
             this.UNITS_comboBox.Items.AddRange(new object[] {
             ((object)(resources.GetObject("UNITS_comboBox.Items"))),
@@ -609,7 +609,7 @@ namespace BACSender
             // 
             // RELIABILITY_comboBox
             // 
-            this.RELIABILITY_comboBox.DisplayMember = "Value";
+            this.RELIABILITY_comboBox.DisplayMember = "Key + Value";
             this.RELIABILITY_comboBox.FormattingEnabled = true;
             this.RELIABILITY_comboBox.Items.AddRange(new object[] {
             ((object)(resources.GetObject("RELIABILITY_comboBox.Items"))),
@@ -653,14 +653,9 @@ namespace BACSender
             // 
             // EVENT_STATE_comboBox
             // 
-            this.EVENT_STATE_comboBox.DisplayMember = "Value";
+            this.EVENT_STATE_comboBox.DisplayMember = "Key + Value";
             this.EVENT_STATE_comboBox.FormattingEnabled = true;
-            this.EVENT_STATE_comboBox.Items.AddRange(new object[] {
-            ((object)(resources.GetObject("EVENT_STATE_comboBox.Items"))),
-            ((object)(resources.GetObject("EVENT_STATE_comboBox.Items1"))),
-            ((object)(resources.GetObject("EVENT_STATE_comboBox.Items2"))),
-            ((object)(resources.GetObject("EVENT_STATE_comboBox.Items3"))),
-            ((object)(resources.GetObject("EVENT_STATE_comboBox.Items4")))});
+            this.EVENT_STATE_comboBox.DataSource = new BindingSource(BacnetDicationarys.BACnetEventState, null);
             this.EVENT_STATE_comboBox.Location = new System.Drawing.Point(183, 80);
             this.EVENT_STATE_comboBox.Name = "EVENT_STATE_comboBox";
             this.EVENT_STATE_comboBox.Size = new System.Drawing.Size(150, 23);
