@@ -21,7 +21,18 @@ namespace BACSender
 
         private void VENDOR_IDENTIFIER_textBox_TextChanged(object sender, EventArgs e)
         {
-            VENDOR_NAME_textBox.Text = BacnetDicationarys.BacnetVendorIdentifier[9];
+            try
+            {
+                VENDOR_NAME_textBox.Text = BacnetDicationarys.BacnetVendorIdentifier[Convert.ToInt16(VENDOR_IDENTIFIER_textBox.Text)];
+            }
+            catch
+            {
+                VENDOR_IDENTIFIER_textBox.Text = "0";
+            }
+            finally
+            {
+                VENDOR_NAME_textBox.Text = BacnetDicationarys.BacnetVendorIdentifier[Convert.ToInt16(VENDOR_IDENTIFIER_textBox.Text)];
+            }
         }
 
         private void addObjectButton_Click(object sender, EventArgs e)
@@ -38,6 +49,11 @@ namespace BACSender
 
         private void writeXMLButton_Click(object sender, EventArgs e)
         {
+            foreach (ListViewItem line in bacObjectListView.Items)
+            {
+                deviceStorage.Objects.Object[0].Properties.Property[1].Value.Add(line.Text);
+            }
+
             if (deviceStorage != null)
             {
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
@@ -85,7 +101,8 @@ namespace BACSender
 
             // 22 Properties for the Device Object
             deviceStorage.Objects.Object[0].Properties.Property.Add(new Property("PROP_OBJECT_IDENTIFIER", "BACNET_APPLICATION_TAG_OBJECT_ID", new List<string>() { new string("OBJECT_DEVICE:" + deviceStorage.Objects.Object[0].Instance.ToString()) }));
-            deviceStorage.Objects.Object[0].Properties.Property.Add(new Property("PROP_OBJECT_LIST", "BACNET_APPLICATION_TAG_OBJECT_ID", new List<string>() { new string("OBJECT_DEVICE:" + deviceStorage.Objects.Object[0].Instance.ToString()) }));
+            /*TODO maybe decline, or change the comment*/
+            deviceStorage.Objects.Object[0].Properties.Property.Add(new Property("PROP_OBJECT_LIST", "BACNET_APPLICATION_TAG_OBJECT_ID", new List<string>() /*{ new string("OBJECT_DEVICE:" + deviceStorage.Objects.Object[0].Instance.ToString()) }*/));
             deviceStorage.Objects.Object[0].Properties.Property.Add(new Property("PROP_OBJECT_NAME", "BACNET_APPLICATION_TAG_CHARACTER_STRING", new List<string>() { new string(OBJECT_NAME_textBox.Text) }));
             deviceStorage.Objects.Object[0].Properties.Property.Add(new Property("PROP_OBJECT_TYPE", "BACNET_APPLICATION_TAG_ENUMERATED", new List<string>() { new string(OBJECT_TYPE_textBox.Text) }));
             deviceStorage.Objects.Object[0].Properties.Property.Add(new Property("PROP_SYSTEM_STATUS", "BACNET_APPLICATION_TAG_ENUMERATED", new List<string>() { new string(SYSTEM_STATUS_textBox.Text) }));
@@ -153,6 +170,17 @@ namespace BACSender
             {
                 MessageBox.Show("Please select an item to delete.");
             }
+        }
+
+        private void changeServicesSupportedButton_Click(object sender, EventArgs e)
+        {
+            SupportedServicesForm newForm = new SupportedServicesForm(PROTOCOL_SERVICES_SUPPORTED_textBox.Text);
+            newForm.ShowDialog();
+        }
+
+        private void changeObjectTypesSupportedButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

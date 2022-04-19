@@ -11,12 +11,12 @@ namespace BACSender
             label1.Text = "0000000000001010000000000010000000100000".Count().ToString();
             DisplaySupportedServices();
 
-            List<BacnetSupportedServices> bacnetSupportedServices = new List<BacnetSupportedServices>();
-            bacnetSupportedServices.Add(BacnetSupportedServices.WRITE_PROPERTY);
-            bacnetSupportedServices.Add(BacnetSupportedServices.I_AM);
-            bacnetSupportedServices.Add(BacnetSupportedServices.WHO_IS);
+            //List<BacnetSupportedServices> bacnetSupportedServices = new List<BacnetSupportedServices>();
+            //bacnetSupportedServices.Add(BacnetSupportedServices.WRITE_PROPERTY);
+            //bacnetSupportedServices.Add(BacnetSupportedServices.I_AM);
+            //bacnetSupportedServices.Add(BacnetSupportedServices.WHO_IS);
 
-            richTextBox1.Text = EncodeSupportedServices(bacnetSupportedServices);
+            //richTextBox1.Text = EncodeSupportedServices(bacnetSupportedServices);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,14 +34,40 @@ namespace BACSender
             //richTextBox1.Text = richTextBox1.Text.Replace("ö", "\", new List<string>() { new string(\"\") })); ");
 
             //richTextBox1.Text = richTextBox1.Text.Replace("{", "");
-            //richTextBox1.Text = richTextBox1.Text.Replace("},", ",");
-            //richTextBox1.Text = richTextBox1.Text.Replace(", ", "=");
+            //richTextBox1.Text = richTextBox1.Text.Replace("}", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace(",", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("1", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("2", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("3", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("4", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("5", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("6", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("7", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("8", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("9", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("0", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace(" ", "");
+            //richTextBox1.Text = richTextBox1.Text.Replace("\"", "");
 
             foreach (var s in richTextBox1.Lines)
             {
-                string[] p = s.Split(new char[] { '"' });
-                richTextBox2.Text += p[1] + ",\n";
+                richTextBox2.Text += "http://" + s + "\n";
             }
+
+            //foreach (var s in richTextBox1.Lines)
+            //{
+            //    string[] p = s.Split(new char[] { '"' });
+            //    richTextBox2.Text += p[1] + ",\n";
+            //}
+
+            //foreach (var sd in BacnetDicationarys.bvlc_function_names)
+            //{
+            //    richTextBox1.Text += sd.Value + "\n";
+            //}
+            //foreach (var sd in BacnetDicationarys.bvlc_ipv6_function_names)
+            //{
+            //    richTextBox1.Text += sd.Value + "\n";
+            //}
         }
         private List<BacnetSupportedServices> DecodeSupportedServices(string supportedServices)
         {

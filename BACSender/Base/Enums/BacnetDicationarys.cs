@@ -1638,11 +1638,12 @@
         };
         public static Dictionary<int, string> BACnetEventState = new Dictionary<int, string>
         {
-            { 0, "offnormal"},
+            { 0, "normal"},
             { 1, "fault"},
-            { 2, "normal"},
-            { 3, "all"},
-            { 4, "active"}
+            { 2, "offnormal"},
+            { 3, "high-limit"},
+            { 4, "low-limit"},
+            { 5, "live-safety-alarm"}
         };
         public static Dictionary<int, string> BACnetObjectType = new Dictionary<int, string>
         {
@@ -1742,6 +1743,40 @@
             { 22, "proprietary-command-failure"},
             { 23, "faults-listed"},
             { 24, "referenced-object-fault"}
+        };
+
+        public static Dictionary<int, string> bvlc_function_names = new Dictionary<int, string>
+        {
+            {0x00, "BVLC-Result"},
+            {0x01, "Write-Broadcast-Distribution-Table"},
+            {0x02, "Read-Broadcast-Distribution-Table"},
+            {0x03, "Read-Broadcast-Distribution-Table-Ack"},
+            {0x04, "Forwarded-NPDU"},
+            {0x05, "Register-Foreign-Device"},
+            {0x06, "Read-Foreign-Device-Table"},
+            {0x07, "Read-Foreign-Device-Table-Ack"},
+            {0x08, "Delete-Foreign-Device-Table-Entry"},
+            {0x09, "Distribute-Broadcast-To-Network"},
+            {0x0a, "Original-Unicast-NPDU"},
+            {0x0b, "Original-Broadcast-NPDU"},
+            {0x0c, "Secured-BVLL"}
+        };
+
+        public static Dictionary<int, string> bvlc_ipv6_function_names = new Dictionary<int, string>
+        {
+            { 0x00, "BVLC-Result" },
+            { 0x01, "Original-Unicast-NPDU" },
+            { 0x02, "Original-Broadcast-NPDU" },
+            { 0x03, "Address-Resolution" },
+            { 0x04, "Forwarded-Address-Resolution" },
+            { 0x05, "Address-Resolution-ACK" },
+            { 0x06, "Virtual-Address-Resolution" },
+            { 0x07, "Virtual-Address-Resolution-ACK" },
+            { 0x08, "Forwarded-NPDU" },
+            { 0x09, "Register-Foreign-Device" },
+            { 0x0A, "Delete-Foreign-Device-Table-Entry" },
+            { 0x0B, "Secure-BVLL" },
+            { 0x0C, "Distribute-Broadcast-To-Network" }
         };
     }
 }

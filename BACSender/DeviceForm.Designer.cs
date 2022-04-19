@@ -77,8 +77,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.deleteObjectButton = new System.Windows.Forms.Button();
             this.writeXMLButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.changeServicesSupportedButton = new System.Windows.Forms.Button();
+            this.changeObjectTypesSupportedButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // OBJECT_IDENTIFIER_label
@@ -503,31 +503,33 @@
             this.writeXMLButton.UseVisualStyleBackColor = true;
             this.writeXMLButton.Click += new System.EventHandler(this.writeXMLButton_Click);
             // 
-            // button2
+            // changeServicesSupportedButton
             // 
-            this.button2.Location = new System.Drawing.Point(267, 80);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 47;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.changeServicesSupportedButton.Location = new System.Drawing.Point(267, 80);
+            this.changeServicesSupportedButton.Name = "changeServicesSupportedButton";
+            this.changeServicesSupportedButton.Size = new System.Drawing.Size(75, 23);
+            this.changeServicesSupportedButton.TabIndex = 47;
+            this.changeServicesSupportedButton.Text = "Change";
+            this.changeServicesSupportedButton.UseVisualStyleBackColor = true;
+            this.changeServicesSupportedButton.Click += new System.EventHandler(this.changeServicesSupportedButton_Click);
             // 
-            // button3
+            // changeObjectTypesSupportedButton
             // 
-            this.button3.Location = new System.Drawing.Point(267, 133);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 48;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.changeObjectTypesSupportedButton.Location = new System.Drawing.Point(267, 133);
+            this.changeObjectTypesSupportedButton.Name = "changeObjectTypesSupportedButton";
+            this.changeObjectTypesSupportedButton.Size = new System.Drawing.Size(75, 23);
+            this.changeObjectTypesSupportedButton.TabIndex = 48;
+            this.changeObjectTypesSupportedButton.Text = "Change";
+            this.changeObjectTypesSupportedButton.UseVisualStyleBackColor = true;
+            this.changeObjectTypesSupportedButton.Click += new System.EventHandler(this.changeObjectTypesSupportedButton_Click);
             // 
             // DeviceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 610);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.changeObjectTypesSupportedButton);
+            this.Controls.Add(this.changeServicesSupportedButton);
             this.Controls.Add(this.writeXMLButton);
             this.Controls.Add(this.deleteObjectButton);
             this.Controls.Add(this.button1);
@@ -633,7 +635,7 @@
         private Button button1;
         private Button deleteObjectButton;
         private Button writeXMLButton;
-        private Button button2;
-        private Button button3;
+        private Button changeServicesSupportedButton;
+        private Button changeObjectTypesSupportedButton;
     }
 }
