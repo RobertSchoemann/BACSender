@@ -18,3 +18,4 @@ D:\BA Code\BACSender\BACSender\obj\Debug\net6.0-windows\ref\BACSender.dll
 D:\BA Code\BACSender\BACSender\obj\Debug\net6.0-windows\BACSender.DeviceForm.resources
 D:\BA Code\BACSender\BACSender\obj\Debug\net6.0-windows\BACSender.CreateBacObject.resources
 D:\BA Code\BACSender\BACSender\obj\Debug\net6.0-windows\BACSender.SupportedServicesForm.resources
+D:\BA Code\BACSender\BACSender\obj\Debug\net6.0-windows\BACSender.SupportedObjectTypesForm.resources

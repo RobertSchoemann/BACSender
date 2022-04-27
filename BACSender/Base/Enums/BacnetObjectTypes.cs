@@ -1,6 +1,6 @@
 ﻿namespace BACSender.Base.Enums
 {
-    public enum BACObjectType
+    public enum BACObjectTypes
     {
         ACCESS_CREDENTIAL = 32,
         ACCESS_DOOR = 30,

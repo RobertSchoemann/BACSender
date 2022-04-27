@@ -56,6 +56,11 @@ namespace BACSender
 
             //foreach (var s in richTextBox1.Lines)
             //{
+            //    richTextBox2.Text += "socks5://" + s + "\n";
+            //}
+
+            //foreach (var s in richTextBox1.Lines)
+            //{
             //    string[] p = s.Split(new char[] { '"' });
             //    richTextBox2.Text += p[1] + ",\n";
             //}

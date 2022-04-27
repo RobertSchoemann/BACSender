@@ -174,13 +174,34 @@ namespace BACSender
 
         private void changeServicesSupportedButton_Click(object sender, EventArgs e)
         {
-            SupportedServicesForm newForm = new SupportedServicesForm(PROTOCOL_SERVICES_SUPPORTED_textBox.Text);
-            newForm.ShowDialog();
+            //SupportedServicesForm newForm = new SupportedServicesForm(PROTOCOL_SERVICES_SUPPORTED_textBox.Text);
+            //newForm.ShowDialog();
+            using (var form = new SupportedServicesForm(PROTOCOL_SERVICES_SUPPORTED_textBox.Text))
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    string val = form.NewSupportedServices;
+
+                    //Do something here with these values
+                    PROTOCOL_SERVICES_SUPPORTED_textBox.Text = val;
+                }
+            }
         }
 
         private void changeObjectTypesSupportedButton_Click(object sender, EventArgs e)
         {
+            using (var form = new SupportedObjectTypesForm(PROTOCOL_OBJECT_TYPES_SUPPORTED_textBox.Text))
+            {
+                var result = form.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    string val = form.NewSupportedObjectTypes;
 
+                    //Do something here with these values
+                    PROTOCOL_OBJECT_TYPES_SUPPORTED_textBox.Text = val;
+                }
+            }
         }
     }
 }

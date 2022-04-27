@@ -13,6 +13,7 @@ namespace BACSender
             ApplicationConfiguration.Initialize();
             //Application.Run(new Form1());
             Application.Run(new DeviceForm());
+            //Application.Run(new SupportedServicesForm("0000000000001011000000000010000100100000"));
         }
     }
 }

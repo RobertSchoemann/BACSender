@@ -277,7 +277,7 @@
             this.PROTOCOL_SERVICES_SUPPORTED_textBox.Name = "PROTOCOL_SERVICES_SUPPORTED_textBox";
             this.PROTOCOL_SERVICES_SUPPORTED_textBox.Size = new System.Drawing.Size(75, 23);
             this.PROTOCOL_SERVICES_SUPPORTED_textBox.TabIndex = 23;
-            this.PROTOCOL_SERVICES_SUPPORTED_textBox.Text = "0000000000001011000000000010000100100000";
+            this.PROTOCOL_SERVICES_SUPPORTED_textBox.Text = "0000000000001011000000000010000000100000";
             // 
             // PROTOCOL_SERVICES_SUPPORTED_label
             // 
